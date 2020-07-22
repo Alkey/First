@@ -53,9 +53,8 @@ public class RombStarsWithOddNumber {
                 } else {
                     drawRomb(input);
                 }
-            } catch (NumberFormatException | IOException e) {
+            } catch (Exception e) {
                 System.out.println("Please enter the number!");
-
             }
         }
     }
