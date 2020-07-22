@@ -15,14 +15,11 @@ public class RombStarsWithOddNumber {
                         builder.append("*");
                     }
                     count += 2;
-                } else if (j == x - 1) {
-                    builder.append(" ");
                 } else {
                     builder.append(" ");
                 }
             }
-            System.out.println(builder.toString());
-            builder.delete(0, builder.length());
+            builder.append("\n");
         }
         count = x - 2;
         for (int i = x / 2; i > 0; i--) {
@@ -30,31 +27,35 @@ public class RombStarsWithOddNumber {
                 if (j == x / 2 - i + 1) {
                     for (int k = 0; k < count; k++) {
                         builder.append("*");
-                        ;
                     }
                     count -= 2;
-                } else if (j == x - 1) {
-                    builder.append(" ");
                 } else {
                     builder.append(" ");
                 }
             }
-            System.out.println(builder.toString());
-            builder.delete(0, builder.length());
+            builder.append("\n");
         }
+        System.out.println(builder.toString());
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         while (true) {
             System.out.println("Input romb size:");
-            int input = Integer.parseInt(reader.readLine());
-            if (input % 2 == 0) {
-                System.out.println("Input odd number!");
-            } else if (input == -1) {
-                break;
-            } else {
-                drawRomb(input);
+            try {
+                int input = Integer.parseInt(reader.readLine());
+                if (input % 2 == 0) {
+                    System.out.println("Input positive odd number!");
+                } else if (input == -1) {
+                    break;
+                } else if (input < -1) {
+                    System.out.println("Input positive odd number!");
+                } else {
+                    drawRomb(input);
+                }
+            } catch (NumberFormatException | IOException e) {
+                System.out.println("Please enter the number!");
+
             }
         }
     }
