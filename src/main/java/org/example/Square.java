@@ -2,7 +2,7 @@ package org.example;
 
 public class Square extends Figure {
 
-    private final int sideLength;
+    private int sideLength;
 
     public Square(String color, int sideLength) {
         super(color);
@@ -15,7 +15,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public int findSquare() {
+    public double findSquare() {
         return sideLength * sideLength;
     }
 

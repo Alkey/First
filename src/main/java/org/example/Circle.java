@@ -2,7 +2,7 @@ package org.example;
 
 public class Circle extends Figure {
 
-    private final int radius;
+    private double radius;
 
     public Circle(String color, int radius) {
         super(color);
@@ -15,8 +15,8 @@ public class Circle extends Figure {
     }
 
     @Override
-    public int findSquare() {
-        return (int) ((radius * radius) * Math.PI);
+    public double findSquare() {
+        return (Math.pow(radius, 2) * Math.PI);
     }
 
     @Override
@@ -24,7 +24,7 @@ public class Circle extends Figure {
         return super.color;
     }
 
-    public int getRadius() {
+    public double getRadius() {
         return radius;
     }
 

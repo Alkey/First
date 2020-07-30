@@ -3,13 +3,15 @@ package org.example;
 import java.util.Random;
 
 public class FigureApp {
+    public static final int MAX_RANDOM_INT = 19;
+    public static final int RANDOM_INT = 4;
 
-    public static Figure[] generateFigures() {
+    private static Figure[] generateFigures() {
         Random random = new Random();
-        int size = random.nextInt(19) + 1;
+        int size = random.nextInt(MAX_RANDOM_INT) + 1;
         Figure[] figures = new Figure[size];
         for (int i = 0; i < figures.length; i++) {
-            int figureNumber = random.nextInt(3) + 1;
+            int figureNumber = random.nextInt(RANDOM_INT);
             switch (figureNumber) {
                 case 1:
                     figures[i] = new Circle(generateColor(), generateRandomInt());
@@ -20,33 +22,34 @@ public class FigureApp {
                 case 3:
                     figures[i] = new Triangle(generateColor(), generateRandomInt(), generateRandomInt());
                     break;
-                case 4:
-                    figures[i] = new Trapezoid(generateColor(), generateRandomInt(), generateRandomInt(), generateRandomInt());
+                default:
+                    figures[i] = new Trapezoid(generateColor(), generateRandomInt(),
+                            generateRandomInt(), generateRandomInt());
                     break;
             }
         }
         return figures;
     }
 
-    public static String generateColor() {
+    private static String generateColor() {
         Random random = new Random();
-        int colorNumber = random.nextInt(4) + 1;
+        int colorNumber = random.nextInt(RANDOM_INT);
         switch (colorNumber) {
             case 1:
-                return "зеленый";
+                return Color.GREEN.getValue();
             case 2:
-                return "желтый";
+                return Color.YELLOW.getValue();
             case 3:
-                return "черный";
+                return Color.BLACK.getValue();
             case 4:
-                return "красный";
+                return Color.RED.getValue();
             default:
-                return "белый";
+                return Color.WHITE.getValue();
         }
     }
 
-    public static int generateRandomInt() {
-        return new Random().nextInt(10) + 1;
+    private static int generateRandomInt() {
+        return new Random().nextInt(MAX_RANDOM_INT) + 1;
     }
 
     public static void main(String[] args) {

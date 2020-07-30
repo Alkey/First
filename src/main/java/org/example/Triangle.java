@@ -2,8 +2,8 @@ package org.example;
 
 public class Triangle extends Figure {
 
-    private final int cathetusA;
-    private final int cathetusB;
+    private double cathetusA;
+    private double cathetusB;
 
     public Triangle(String color, int cathetusA, int cathetusB) {
         super(color);
@@ -17,7 +17,7 @@ public class Triangle extends Figure {
     }
 
     @Override
-    public int findSquare() {
+    public double findSquare() {
         return (cathetusA * cathetusB) / 2;
     }
 
@@ -26,16 +26,16 @@ public class Triangle extends Figure {
         return super.color;
     }
 
-    public int getCathetusA() {
+    public double getCathetusA() {
         return cathetusA;
     }
 
-    public int getCathetusB() {
+    public double getCathetusB() {
         return cathetusB;
     }
 
-    public int getHypotenuse() {
-        return (int) Math.sqrt(Math.pow(cathetusA, 2) + Math.pow(cathetusB, 2));
+    public double getHypotenuse() {
+        return Math.sqrt(Math.pow(cathetusA, 2) + Math.pow(cathetusB, 2));
     }
 
     @Override

@@ -2,9 +2,9 @@ package org.example;
 
 public class Trapezoid extends Figure {
 
-    private final int height;
-    private final int sideA;
-    private final int sideB;
+    private int height;
+    private double sideA;
+    private double sideB;
 
     public Trapezoid(String color, int height, int sideA, int sideB) {
         super(color);
@@ -19,7 +19,7 @@ public class Trapezoid extends Figure {
     }
 
     @Override
-    public int findSquare() {
+    public double findSquare() {
         return (sideA + sideB) / 2 * height;
     }
 
@@ -32,11 +32,11 @@ public class Trapezoid extends Figure {
         return height;
     }
 
-    public int getSideA() {
+    public double getSideA() {
         return sideA;
     }
 
-    public int getSideB() {
+    public double getSideB() {
         return sideB;
     }
 

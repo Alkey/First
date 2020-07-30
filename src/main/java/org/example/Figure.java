@@ -10,7 +10,7 @@ public abstract class Figure {
 
     public abstract void drawFigure();
 
-    public abstract int findSquare();
+    public abstract double findSquare();
 
     public abstract String getColor();
 }
