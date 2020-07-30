@@ -4,7 +4,7 @@ public class Square extends Figure {
 
     private int sideLength;
 
-    public Square(String color, int sideLength) {
+    public Square(Color color, int sideLength) {
         super(color);
         this.sideLength = sideLength;
     }
@@ -20,7 +20,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public String getColor() {
+    public Color getColor() {
         return super.color;
     }
 
@@ -32,6 +32,6 @@ public class Square extends Figure {
     public String toString() {
         return "Фигура: квадрат, площадь: " + findSquare() + " кв. ед.," +
                 " длина стороны: " + getSideLength() + " ед., " +
-                "цвет: " + getColor();
+                "цвет: " + getColor().getValue();
     }
 }

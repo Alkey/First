@@ -4,7 +4,7 @@ public class Circle extends Figure {
 
     private double radius;
 
-    public Circle(String color, int radius) {
+    public Circle(Color color, int radius) {
         super(color);
         this.radius = radius;
     }
@@ -20,7 +20,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String getColor() {
+    public Color getColor() {
         return super.color;
     }
 
@@ -32,6 +32,6 @@ public class Circle extends Figure {
     public String toString() {
         return "Фигура: круг, площадь: " + findSquare() + " кв. ед.," +
                 " радиус: " + getRadius() + " ед., " +
-                "цвет: " + getColor();
+                "цвет: " + getColor().getValue();
     }
 }

@@ -2,9 +2,9 @@ package org.example;
 
 public abstract class Figure {
 
-    protected String color;
+    protected Color color;
 
-    public Figure(String color) {
+    public Figure(Color color) {
         this.color = color;
     }
 
@@ -12,5 +12,5 @@ public abstract class Figure {
 
     public abstract double findSquare();
 
-    public abstract String getColor();
+    public abstract Color getColor();
 }

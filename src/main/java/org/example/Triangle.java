@@ -5,7 +5,7 @@ public class Triangle extends Figure {
     private double cathetusA;
     private double cathetusB;
 
-    public Triangle(String color, int cathetusA, int cathetusB) {
+    public Triangle(Color color, int cathetusA, int cathetusB) {
         super(color);
         this.cathetusA = cathetusA;
         this.cathetusB = cathetusB;
@@ -22,7 +22,7 @@ public class Triangle extends Figure {
     }
 
     @Override
-    public String getColor() {
+    public Color getColor() {
         return super.color;
     }
 
@@ -42,6 +42,6 @@ public class Triangle extends Figure {
     public String toString() {
         return "Фигура: треугольник, площадь: " + findSquare() + " кв. ед.," +
                 " длина гипотенузы: " + getHypotenuse() + " ед., " +
-                "цвет: " + getColor();
+                "цвет: " + getColor().getValue();
     }
 }

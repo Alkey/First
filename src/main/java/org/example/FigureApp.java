@@ -31,20 +31,20 @@ public class FigureApp {
         return figures;
     }
 
-    private static String generateColor() {
+    private static Color generateColor() {
         Random random = new Random();
         int colorNumber = random.nextInt(RANDOM_INT);
         switch (colorNumber) {
             case 1:
-                return Color.GREEN.getValue();
+                return Color.GREEN;
             case 2:
-                return Color.YELLOW.getValue();
+                return Color.YELLOW;
             case 3:
-                return Color.BLACK.getValue();
+                return Color.BLACK;
             case 4:
-                return Color.RED.getValue();
+                return Color.RED;
             default:
-                return Color.WHITE.getValue();
+                return Color.WHITE;
         }
     }
 

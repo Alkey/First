@@ -6,7 +6,7 @@ public class Trapezoid extends Figure {
     private double sideA;
     private double sideB;
 
-    public Trapezoid(String color, int height, int sideA, int sideB) {
+    public Trapezoid(Color color, int height, int sideA, int sideB) {
         super(color);
         this.height = height;
         this.sideA = sideA;
@@ -24,7 +24,7 @@ public class Trapezoid extends Figure {
     }
 
     @Override
-    public String getColor() {
+    public Color getColor() {
         return super.color;
     }
 
@@ -46,6 +46,6 @@ public class Trapezoid extends Figure {
                 " длина стороны А: " + getSideA() + " ед., " +
                 " длина стороны В: " + getSideB() + " ед., " +
                 " высота: " + getHeight() + " ед., " +
-                "цвет: " + getColor();
+                "цвет: " + getColor().getValue();
     }
 }

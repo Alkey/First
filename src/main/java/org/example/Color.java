@@ -1,6 +1,7 @@
 package org.example;
 
 public enum Color {
+
     RED("красный"),
     GREEN("зеленый"),
     BLACK("черный"),
