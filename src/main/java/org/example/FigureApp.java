@@ -3,12 +3,12 @@ package org.example;
 import java.util.Random;
 
 public class FigureApp {
-    public static final int MAX_RANDOM_INT = 19;
-    public static final int RANDOM_INT = 4;
+    private static final int MAX_FIGURES_AMOUNT = 19;
+    private static final int RANDOM_INT = 4;
 
     private static Figure[] generateFigures() {
         Random random = new Random();
-        int size = random.nextInt(MAX_RANDOM_INT) + 1;
+        int size = random.nextInt(MAX_FIGURES_AMOUNT) + 1;
         Figure[] figures = new Figure[size];
         for (int i = 0; i < figures.length; i++) {
             int figureNumber = random.nextInt(RANDOM_INT);
@@ -49,7 +49,7 @@ public class FigureApp {
     }
 
     private static int generateRandomInt() {
-        return new Random().nextInt(MAX_RANDOM_INT) + 1;
+        return new Random().nextInt(MAX_FIGURES_AMOUNT) + 1;
     }
 
     public static void main(String[] args) {
